@@ -274,10 +274,10 @@
       '<path d="M10 13V3m-4 4 4-4 4 4M3 13v4h14v-4" />',
       '</svg><h2 id="admin-upload-heading">Upload PDF to Folder</h2></div>',
       '<form id="admin-upload-form" class="admin-upload-form">',
-      '<label>1. Subject<select id="admin-upload-subject" required>' +
+      '<label>1. Subject<select id="admin-upload-subject" name="subject" required>' +
         subjectsForOptions(state.uploadSubject) + '</select></label>',
       '<label><span id="admin-upload-folder-label">2. Select folder inside ' +
-        escapeHtml(state.uploadSubject) + '</span><select id="admin-upload-folder" required>' +
+        escapeHtml(state.uploadSubject) + '</span><select id="admin-upload-folder" name="folder" required>' +
         folderOptions(state.uploadSubject, state.uploadFolder) + '</select></label>',
       '<p class="admin-no-folder" id="admin-no-folder" hidden>No folders found in ' +
         escapeHtml(state.uploadSubject) + '. Please create a folder using the box above first!</p>',
