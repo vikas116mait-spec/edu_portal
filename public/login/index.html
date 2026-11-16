@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f3eb" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Teacher Sign In — CS Core Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/theme.css" />
+    <script src="/cursor.js" defer></script>
+    <script src="/theme-picker.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/" aria-label="CS Core Portal home">
+            CS Core Portal<span class="brand-star">*</span>
+          </a>
+          <span class="brand-chip">SCHOOL&nbsp; CS&nbsp; HUB</span>
+        </div>
+        <nav class="header-nav" aria-label="Main navigation">
+          <a class="directory-link" href="/">STUDY LIBRARY</a>
+          <a class="teacher-link" href="/login/" aria-current="page">
+            <span class="shield-icon" aria-hidden="true">♢</span>
+            TEACHER SIGN IN
+          </a>
+        </nav>
+        <label class="theme-picker">
+          <span>TRY A THEME</span>
+          <select id="theme-picker" aria-label="Preview a website theme"></select>
+        </label>
+      </div>
+    </header>
+    <main id="app"></main>
+  </body>
+</html>

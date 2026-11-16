@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: cs-core-portal-api
+    runtime: python
+    plan: starter
+    region: singapore
+    rootDir: webdev
+    buildCommand: python --version
+    startCommand: python server.py --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    disk:
+      name: cs-core-portal-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: CS_PORTAL_DATA_FILE
+        value: /var/data/demo.json
+      - key: CS_PORTAL_TEACHER_ACCOUNTS_FILE
+        value: /var/data/teachers.json
+      - key: CS_PORTAL_UPLOAD_ROOT
+        value: /var/data/documents
+      - key: CS_PORTAL_REQUIRE_CONFIGURED_CREDENTIALS
+        value: "true"
+      - key: CS_PORTAL_COOKIE_SECURE
+        value: "true"
+      - key: CS_PORTAL_TEACHER_USERNAME
+        sync: false
+      - key: CS_PORTAL_TEACHER_PASSWORD
+        sync: false

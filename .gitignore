@@ -1,0 +1,7 @@
+data/.teachers-*.tmp
+data/teachers.json
+.env*
+!.env.example
+.vercel/
+node_modules/
+storage/documents/

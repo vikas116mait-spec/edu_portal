@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Manage folders and study documents in the CS Core Portal."
+    />
+    <meta name="theme-color" content="#f6f3eb" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>CS Core Portal - Upload & Folders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/theme.css" />
+    <script src="/cursor.js" defer></script>
+    <script src="/theme-picker.js" defer></script>
+    <script src="/admin/admin.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/" aria-label="CS Core Portal home">
+            CS Core Portal<span class="brand-star">*</span>
+          </a>
+          <span class="brand-chip">SCHOOL&nbsp; CS&nbsp; HUB</span>
+        </div>
+        <nav class="header-nav" aria-label="Main navigation">
+          <a class="directory-link" href="/">STUDY LIBRARY</a>
+          <a class="admin-nav-link" href="#admin-workspace" aria-current="page">
+            <span aria-hidden="true">⇧</span> UPLOAD &amp; FOLDERS
+          </a>
+          <a class="admin-logout" href="/login/" data-admin-logout aria-label="Sign out" title="Sign out">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M8 3H4.5A1.5 1.5 0 0 0 3 4.5v11A1.5 1.5 0 0 0 4.5 17H8" />
+              <path d="M11 6l4 4-4 4M15 10H7" />
+            </svg>
+          </a>
+        </nav>
+        <label class="theme-picker">
+          <span>TRY A THEME</span>
+          <select id="theme-picker" aria-label="Preview a website theme"></select>
+        </label>
+      </div>
+    </header>
+
+    <main id="admin-app" class="admin-page" aria-live="polite">
+      <div class="admin-shell">
+        <div class="admin-spacer" aria-hidden="true"></div>
+        <p class="admin-loading">Loading folders and documents…</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      © 2026 CS Core Portal — Dedicated Study Material for School Students.
+    </footer>
+  </body>
+</html>
