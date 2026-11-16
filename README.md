@@ -44,27 +44,27 @@ the demo server on localhost.
 
 This project serves its static UI from Vercel and runs the existing Python
 server as a Render web service. Vercel proxies `/api/*` to Render, so the
-browser uses one website origin for both the UI and API. The Render service
-uses a persistent disk for the catalog, teacher accounts, and uploaded PDFs.
+browser uses one website origin for both the UI and API.
 
-The Render service needs a paid plan for its persistent disk. A free Render
-service has an ephemeral filesystem, so uploaded documents and account data
-would be lost when it restarts or deploys.
+The included Render Blueprint uses a free web service. Its filesystem is
+ephemeral, so teacher accounts, catalog edits, and uploaded documents can be
+lost when the service restarts, spins down, or deploys. Render's free service
+also spins down after 15 minutes without traffic, so its first request after
+idle may take about a minute.
 
 ### Before deployment
 
-1. Push this project to a Git repository. The portal is in the `webdev`
-   subdirectory, so select `webdev` as the project root in Vercel.
-2. In Render, create a Blueprint from this repository and set the Blueprint
-   path to `webdev/render.yaml`. The file defines the Python API service and
-   its persistent disk.
+1. Push this project to a Git repository. The app files are at the repository
+   root, so use `.` as the Vercel root directory.
+2. In Render, create a Blueprint from this repository. The `render.yaml` file
+   at the repository root defines the free Python API service.
 3. When Render asks for `CS_PORTAL_TEACHER_USERNAME` and
    `CS_PORTAL_TEACHER_PASSWORD`, enter the production teacher credentials.
    The hosted service refuses to start if those values are missing.
 4. Wait for the Render service to finish deploying and copy its HTTPS URL,
    such as `https://cs-core-portal-api.onrender.com`.
-5. In Vercel, import the same repository and set **Root Directory** to
-   `webdev`. Use the **Other** framework preset and set the environment
+5. In Vercel, import the same repository and set **Root Directory** to `.`.
+   Use the **Other** framework preset and set the environment
    variable `CS_PORTAL_API_ORIGIN` to the Render HTTPS origin (no path or
    trailing slash). `vercel.mjs` serves `public/` and proxies `/api/*` to that
    origin.
@@ -77,12 +77,13 @@ would be lost when it restarts or deploys.
 
 The API origin can be omitted for the first Vercel deployment; that deployment
 will serve the UI only. Add the origin and redeploy to connect the API. Keep
-`.env` files, `data/teachers.json`, and uploaded PDFs out of Git. The first
-Render start copies `data/demo.json` to the persistent disk, then future catalog
-changes are saved there.
+`.env` files, `data/teachers.json`, and uploaded PDFs out of Git. The Render
+free service loads the demo catalog from the repository; runtime changes are
+temporary.
 
 For a deploy from the terminal, install and authenticate the Vercel CLI, then
-run `vercel` for a preview or `vercel --prod` for production from `webdev`.
+run `vercel` for a preview or `vercel --prod` for production from the project
+root.
 The `CS_PORTAL_API_ORIGIN` environment variable must be set in the Vercel
 project before the production deployment that should proxy API traffic.
 
