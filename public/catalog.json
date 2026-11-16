@@ -1,0 +1,104 @@
+{
+  "subjects": [
+    {
+      "name": "Python",
+      "code": "PY-101",
+      "description": "Syntax, OOP, Algorithms & Scripts",
+      "icon": "</>",
+      "folders": ["Chapter 1", "Chapter 2"]
+    },
+    {
+      "name": "C++",
+      "code": "CPP-201",
+      "description": "Pointers, Memory, Classes & STL",
+      "icon": "▦",
+      "folders": [
+        "Unit 1: Basics & Syntax",
+        "Unit 2: Pointers",
+        "Unit 3: OOP",
+        "Unit 4: STL",
+        "Chapter 1"
+      ]
+    },
+    {
+      "name": "Data Structures",
+      "code": "DSA-301",
+      "description": "Arrays, Stacks, Trees & Graphs",
+      "icon": "▱",
+      "folders": [
+        "Arrays & Linked Lists",
+        "Stacks & Queues",
+        "Trees & BST",
+        "Graphs"
+      ]
+    },
+    {
+      "name": "Database Systems",
+      "code": "DBMS-204",
+      "description": "SQL, Normalization & ACID",
+      "icon": "▤",
+      "folders": [
+        "SQL Queries",
+        "Relational Algebra",
+        "Normalization"
+      ]
+    },
+    {
+      "name": "Computer Networks",
+      "code": "CN-401",
+      "description": "OSI Model, TCP/IP & Sockets",
+      "icon": "⌘",
+      "folders": [
+        "OSI & TCP/IP Model",
+        "IP Addressing",
+        "Routing Protocols"
+      ]
+    },
+    {
+      "name": "Operating Systems",
+      "code": "OS-302",
+      "description": "Kernel, Paging & Scheduling",
+      "icon": "›_",
+      "folders": [
+        "Process & Threads",
+        "CPU Scheduling",
+        "Memory & Paging"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "c421b3a2-be9a-477a-814b-608f49a6bdd2",
+      "title": "hgig",
+      "subject": "Python",
+      "folder": "Chapter 1",
+      "description": "",
+      "fileName": "graduation related dcouments.pdf",
+      "fileSize": 2151984,
+      "pdfUrl": "https://zqswmhodvzxtozqjzxxc.supabase.co/storage/v1/object/public/study-materials/python/chapter_1/1794688621360_graduation_related_dcouments.pdf",
+      "createdAt": "2026-11-14T20:37:03.17911+00:00"
+    },
+    {
+      "id": "16ff88e5-052e-4887-852b-78cbfd6eae90",
+      "title": "bmnbm",
+      "subject": "Python",
+      "folder": "Chapter 1",
+      "description": "",
+      "fileName": "Brochure_AI Driven Medical Technology.pdf",
+      "fileSize": 171593,
+      "pdfUrl": "https://zqswmhodvzxtozqjzxxc.supabase.co/storage/v1/object/public/study-materials/python/chapter_1/1794688600472_Brochure_AI_Driven_Medical_Technology.pdf",
+      "createdAt": "2026-11-14T20:36:44.536726+00:00"
+    },
+    {
+      "id": "361e8ad5-6ced-44ec-8773-e4f95179ede5",
+      "title": "jjoiojijn",
+      "subject": "Python",
+      "folder": "Chapter 2",
+      "description": "",
+      "fileName": "graduation related dcouments.pdf",
+      "fileSize": 2151984,
+      "pdfUrl": "https://zqswmhodvzxtozqjzxxc.supabase.co/storage/v1/object/public/study-materials/python/chapter_2/1793169230060_graduation_related_dcouments.pdf",
+      "createdAt": "2026-10-28T06:33:51.855276+00:00"
+    }
+  ]
+}

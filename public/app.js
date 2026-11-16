@@ -738,7 +738,13 @@ async function loadCatalog() {
   `;
 
   try {
-    const response = await fetch("/api/catalog");
+    let response;
+    try {
+      response = await fetch("/api/catalog");
+    } catch {
+      // Vercel's static deployment may not have an API server configured.
+    }
+    if (!response?.ok) response = await fetch("/catalog.json");
     if (!response.ok) {
       throw new Error(`Catalog request failed (${response.status})`);
     }
@@ -753,8 +759,7 @@ async function loadCatalog() {
         <section class="state-card">
           <h1 class="state-title">The study directory is unavailable</h1>
           <p class="state-message">
-            Start the local backend with <code>python3 server.py</code>, then
-            reload this page.
+            The catalog could not be loaded. Please try again later.
           </p>
         </section>
       </div>
